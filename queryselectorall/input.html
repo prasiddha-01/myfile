@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+   <form action="" method="" >
+     <input type="text" id="name" value="name" name="name" autofocus ><br> 
+     <p onclick="main()" >click</p>
+   </form>
+   <p id = "p"> </p>
+   <script>
+    function main(){
+        
+        let inp = document.querySelector("#name")
+        console.log(inp.value)
+        let p = document.querySelector("#p")
+        p.innerHTML=inp.value; 
+        setTimeout(hide,5000)
+    }
+    function hide(){
+      p.innerHTML =""
+    }
+   </script>
+</body>
+</html>

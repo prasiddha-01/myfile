@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style> 
+     .box{
+        height : 100px; 
+        width: 300px ;
+        border: 2px solid;
+        margin: 20px;
+    
+     }
+     </style>
+     <div class="box"> </div>
+     <div class="box"> </div>
+     <div class="box"> </div>
+     <div class="box"> </div>
+     
+     <script>
+
+
+        let btn = document.querySelectorAll(".box")
+        for(let i = 0;i<btn.length;i++){
+            btn[i].style.backgroundColor="blue";
+        }
+
+        for ( let i = 0 ; i<btn.length ; i++ ){
+            btn[i].addEventListener("click",function() {
+                console.log(i)
+                console.log(btn[i].style.backgroundColor)
+                if(btn[i].style.backgroundColor=="blue" ){
+                    btn[i].style.backgroundColor="red";
+                }else{
+                    btn[i].style.backgroundColor="blue";
+                }
+            })
+        }
+     </script>
+</body>
+</html>
